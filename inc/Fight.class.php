@@ -4,11 +4,7 @@ class Fight {
   private $Players;
   private $Winner;
 
-  function __construct($player1, $player2){
-    if (!is_object($player1) || !is_object($player2)){
-      throw new Exception("You must have 'Players' before starting a 'Fight'.", 1);
-    }
-
+  function __construct(Player $player1, Player $player2){
     $this->Players = array($player1, $player2);
   }
 
